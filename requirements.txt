@@ -1,1 +1,6 @@
-.
+pyyaml
+enum34
+ply
+psutil
+deluge-client
+requests
