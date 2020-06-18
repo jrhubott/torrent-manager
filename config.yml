@@ -6,7 +6,9 @@ my_task:
   strategies:
     my_strategy:
       categories:
-        - tv
+        - /downloads/tv
+        - /downloads/video
       status:
         - Stopped
+      remove: seeding_time > 300
   delete_data: true
