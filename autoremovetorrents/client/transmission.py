@@ -1,6 +1,5 @@
 #-*- coding:utf-8 -*-
 import requests
-import array
 from ..torrent import Torrent
 from ..torrentstatus import TorrentStatus
 from ..exception.connectionfailure import ConnectionFailure
