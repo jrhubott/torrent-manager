@@ -19,7 +19,7 @@
 				"docker-build"
 			],
 			"python": {
-				"file": "-m autoremovetorrents.main"
+				"file": "-m autoremovetorrents.main --conf /config/config.yml --view"
 			}
 		}
 	]

@@ -4,11 +4,16 @@ my_task:
   username:
   password:
   strategies:
-    my_strategy:
+    delete_after_seed:
+      categories:
+        - /downloads/tv
+        - /downloads/video
+      remove: seeding_time > 300
+    delete_when_stopped:
       categories:
         - /downloads/tv
         - /downloads/video
       status:
         - Stopped
-      remove: seeding_time > 300
+      remove: last_activity > 300
   delete_data: true

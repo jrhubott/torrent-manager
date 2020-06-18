@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile
     entrypoint: /bin/bash
-    command: -c "pip install debugpy -t /tmp && python /tmp/debugpy --wait-for-client --listen 0.0.0.0:5678 -m autoremovetorrents.main"
+    command: -c "pip install debugpy -t /tmp && python /tmp/debugpy --wait-for-client --listen 0.0.0.0:5678"
     ports:
       - 5678:5678
 
