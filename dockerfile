@@ -28,7 +28,9 @@ RUN useradd appuser && chown -R appuser /app
 USER appuser
 
 ENV CONFIG_YML /config/config.yml
+ENV SCAN_INTERVAL 60
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
 #CMD python -m autoremovetorrents.main --conf /config/config.yml --view
-CMD python run.py
+#CMD python run.py
+ENTRYPOINT ["python", "run.py"]

@@ -20,7 +20,7 @@
             ]
         },
         {
-            "name": "Docker: Python - General",
+            "name": "Docker Container Debug",
             "type": "docker",
             "request": "launch",
             "preLaunchTask": "docker-run: debug",
