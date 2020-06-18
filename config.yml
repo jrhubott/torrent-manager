@@ -1,0 +1,12 @@
+my_task:
+  client: Transmission
+  host: http://192.168.0.60:9091
+  username:
+  password:
+  strategies:
+    my_strategy:
+      categories:
+        - tv
+      status:
+        - Stopped
+  delete_data: true
