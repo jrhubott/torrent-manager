@@ -16,13 +16,14 @@ def pre_processor(argv):
     conf_path = 'config.yml'
     # Task
     task = None
+    host_override = ''
 
     # Set default logging path to current working directory
     logger.Logger.log_path = ''
 
     # Get arguments
     try:
-        opts = getopt.getopt(argv, 'vc:t:l:', ['view', 'conf=', 'task=', 'log='])[0]
+        opts = getopt.getopt(argv, 'vc:t:l:h:', ['view', 'conf=', 'task=', 'log=', 'host='])[0]
     except getopt.GetoptError:
         print('Invalid arguments.')
         sys.exit(255)
@@ -35,6 +36,8 @@ def pre_processor(argv):
             task = arg
         elif opt in ('-l', '--log'):
             logger.Logger.log_path = arg
+        elif opt in ('-h', '--host'):
+            host_override = arg;
 
     # Logger
     lg = logger.Logger.register(__name__)
@@ -48,6 +51,12 @@ def pre_processor(argv):
         with open_(conf_path, 'r', encoding='utf-8') as stream:
             result = yaml.safe_load(stream)
         lg.info('Found %d task(s) in the file.' % len(result))
+
+        # Override host names in tasks
+        if host_override:
+            lg.info("Overriding host: " + host_override)
+            for task_name in result:
+                result[task_name]['host'] = host_override
 
         # Run tasks
         if task == None: # Task name specified

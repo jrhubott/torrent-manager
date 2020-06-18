@@ -25,7 +25,7 @@ lg.info("Scan interval: " + str(delay))
 
 #loop forever
 while True:
-    pre_processor(["--conf",config_yml,"--view"])
+    pre_processor(["--conf="+config_yml])
     lg.info("Scan again in " + str(delay) + " seconds")
     time.sleep(delay)
 

@@ -1,6 +1,6 @@
-my_task:
+delete_data_task:
   client: Transmission
-  host: http://192.168.0.60:9091
+  host: http://transmission:9091
   username:
   password:
   strategies:
@@ -8,12 +8,13 @@ my_task:
       categories:
         - /downloads/tv
         - /downloads/video
-      remove: seeding_time > 300
+      remove: seeding_time > 3600
     delete_when_stopped:
       categories:
         - /downloads/tv
         - /downloads/video
       status:
         - Stopped
-      remove: last_activity > 300
+        - Downloading
+      remove: last_activity > 3600
   delete_data: true
