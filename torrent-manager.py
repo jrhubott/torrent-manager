@@ -5,6 +5,7 @@ import signal
 from autoremovetorrents.main import pre_processor
 from autoremovetorrents.logger import Logger
 
+#Handle shutdown gracefully when loaded in docker
 def sigterm_handler(signum,frame):  
     raise OSError("Received exit signal")
 
