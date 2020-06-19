@@ -6,7 +6,6 @@ import traceback
 import yaml
 from . import logger
 from .task import Task
-from autoremovetorrents.version import __version__
 from autoremovetorrents.compatibility.open_ import open_
 
 def pre_processor(argv):
@@ -44,8 +43,7 @@ def pre_processor(argv):
 
     # Run autoremove
     try:
-        # Show version
-        lg.info('Auto Remove Torrents %s' % __version__)
+        
         # Load configurations
         lg.info('Loading configurations...')
         with open_(conf_path, 'r', encoding='utf-8') as stream:
