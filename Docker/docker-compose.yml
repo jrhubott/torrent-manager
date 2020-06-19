@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   autoremovetorrents:
-    image: jrhubott/autoremove-torrents
+    image: jrhubott/torrent-manager
     build:
       context: ../
       dockerfile: Docker/Dockerfile
