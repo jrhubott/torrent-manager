@@ -4,7 +4,7 @@ import time
 import signal
 from autoremovetorrents.main import pre_processor
 from autoremovetorrents.logger import Logger
-from autoremovetorrents.version import __version__ as autoremovetorrents_version
+from autoremovetorrents.version import __version__ as __autoremovetorrents_version__
 
 
 __version__ = '1.0.0'
@@ -23,7 +23,7 @@ lg.info("Initial startup")
 
 # Show versions
 lg.info('Torrent Manager Version: %s' % __version__)
-lg.info('Auto Remove Torrents Version: %s' % autoremovetorrents_version)
+lg.info('Auto Remove Torrents Version: %s' % __autoremovetorrents_version__)
 
 config_yml = os.environ.get('CONFIG_YML','config.yml')
 delay = int(os.environ.get("SCAN_INTERVAL",5))
