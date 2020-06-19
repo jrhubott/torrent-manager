@@ -37,7 +37,7 @@ def pre_processor(argv):
         elif opt in ('-l', '--log'):
             logger.Logger.log_path = arg
         elif opt in ('-h', '--host'):
-            host_override = arg;
+            host_override = arg
 
     # Logger
     lg = logger.Logger.register(__name__)

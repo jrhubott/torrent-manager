@@ -4,5 +4,5 @@ services:
   autoremovetorrents:
     image: jrhubott/autoremove-torrents
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ../
+      dockerfile: Docker/Dockerfile

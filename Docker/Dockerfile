@@ -21,7 +21,7 @@ RUN python -m pip install -r requirements.txt
 WORKDIR /app
 ADD ./autoremovetorrents /app/autoremovetorrents
 ADD config.yml /config/
-ADD run.py .
+ADD torrent-manager.py .
 
 # Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
 RUN useradd appuser && chown -R appuser /app
@@ -33,4 +33,4 @@ ENV SCAN_INTERVAL 60
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
 #CMD python -m autoremovetorrents.main --conf /config/config.yml --view
 #CMD python run.py
-ENTRYPOINT ["python", "run.py"]
+ENTRYPOINT ["python", "torrent-manager.py"]

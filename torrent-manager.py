@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#import autoremovetorrents
 import os
 import time
 import signal
