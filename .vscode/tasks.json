@@ -6,8 +6,8 @@
 			"label": "docker-build",
 			"platform": "python",
 			"dockerBuild": {
-				"tag": "jrhubott/autoremove-torrents:debug",
-				"dockerfile": "${workspaceFolder}/Dockerfile",
+				"tag": "jrhubott/torrent-manager:debug",
+				"dockerfile": "${workspaceFolder}/Docker/Dockerfile",
 				"context": "${workspaceFolder}",
 				"pull": true
 			}
