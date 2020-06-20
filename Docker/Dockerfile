@@ -20,7 +20,7 @@ RUN python -m pip install -r requirements.txt
 
 WORKDIR /app
 ADD ./autoremovetorrents /app/autoremovetorrents
-ADD config.yml /config/
+ADD conf/* /config/
 ADD torrent-manager.py .
 
 # Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
