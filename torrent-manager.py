@@ -2,12 +2,11 @@
 import os
 import time
 import signal
+from version import __version__
 from autoremovetorrents.main import pre_processor
 from autoremovetorrents.logger import Logger
 from autoremovetorrents.version import __version__ as __autoremovetorrents_version__
 
-
-__version__ = '1.0.0'
 
 #Handle shutdown gracefully when loaded in docker
 def sigterm_handler(signum,frame):  
