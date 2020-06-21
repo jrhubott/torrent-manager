@@ -24,7 +24,7 @@ lg.info("Initial startup")
 lg.info('Torrent Manager Version: %s' % __version__)
 lg.info('Auto Remove Torrents Version: %s' % __autoremovetorrents_version__)
 
-config_yml = os.environ.get('CONFIG_YML','conf/config.yml')
+config_yml = os.environ.get('CONFIG_YML','config/config.yml')
 delay = int(os.environ.get("SCAN_INTERVAL",5))
 
 lg.info("Config: " + config_yml)

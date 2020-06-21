@@ -7,7 +7,7 @@
             "name": "Python: torrent-manager.py",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/torrent-manager.py",
+            "program": "${workspaceFolder}/torrent-manager/torrent-manager.py",
             "console": "integratedTerminal"
         },
         {

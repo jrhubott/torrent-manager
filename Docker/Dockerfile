@@ -11,18 +11,14 @@ RUN apt-get update \
 && apt-get install gcc -y \
 && apt-get clean
 
-
 # Install pip requirements
 ADD requirements.txt .
-
 
 RUN python -m pip install -r requirements.txt
 
 WORKDIR /app
-ADD ./autoremovetorrents /app/autoremovetorrents
-ADD conf/* /config/
-ADD torrent-manager.py .
-ADD version.py .
+ADD config/* /config/
+ADD ./torrent-manager /app/
 
 # Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
 RUN useradd appuser && chown -R appuser /app

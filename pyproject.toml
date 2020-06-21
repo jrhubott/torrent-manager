@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "torrent-manager"
-version = "1.0.2"
+version = "1.0.3"
 description = ""
 authors = ["Jason Rhubottom <jason@rhusoft.com>"]
 
