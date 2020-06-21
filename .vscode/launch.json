@@ -8,16 +8,8 @@
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/torrent-manager/torrent-manager.py",
+            "args": ["--view","--host=http://192.168.0.60:9091"],
             "console": "integratedTerminal"
-        },
-        {
-            "name": "Python: Autoremovetorrents",
-            "type": "python",
-            "request": "launch",
-            "module": "autoremovetorrents.main",
-            "args": [
-                "--view" , "--host=http://192.168.0.60:9091"
-            ]
         },
         {
             "name": "Docker Container Debug",

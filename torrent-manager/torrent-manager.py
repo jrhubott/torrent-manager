@@ -2,6 +2,7 @@
 import os
 import time
 import signal
+import sys
 from version import __version__
 from autoremovetorrents.main import pre_processor
 from autoremovetorrents.logger import Logger
@@ -30,9 +31,12 @@ delay = int(os.environ.get("SCAN_INTERVAL",5))
 lg.info("Config: " + config_yml)
 lg.info("Scan interval: " + str(delay))
 
+conf = sys.argv[1:]
+conf.append("--conf="+config_yml)
+
 #loop forever
 while True:
-    pre_processor(["--conf="+config_yml])
+    pre_processor(conf)
     lg.info("Scan again in " + str(delay) + " seconds")
     time.sleep(delay)
 
