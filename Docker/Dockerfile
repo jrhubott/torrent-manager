@@ -1,5 +1,5 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.8-slim
+FROM python:3.8.3-slim-buster
 
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -22,6 +22,7 @@ WORKDIR /app
 ADD ./autoremovetorrents /app/autoremovetorrents
 ADD conf/* /config/
 ADD torrent-manager.py .
+ADD version.py .
 
 # Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
 RUN useradd appuser && chown -R appuser /app
