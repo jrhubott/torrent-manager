@@ -1,0 +1,3 @@
+[submodule "torrent-manager/autoremovetorrents"]
+	path = torrent-manager/autoremovetorrents
+	url = https://github.com/jrhubott/autoremove-torrents.git

@@ -4,6 +4,9 @@ import time
 import signal
 import sys
 from version import __version__
+
+sys.path.append(os.path.join(os.path.dirname(__file__), "autoremovetorrents"))
+
 from autoremovetorrents.main import pre_processor
 from autoremovetorrents.logger import Logger
 from autoremovetorrents.version import __version__ as __autoremovetorrents_version__
