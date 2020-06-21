@@ -30,13 +30,15 @@ ENV PYTHONUNBUFFERED 1
 COPY --from=compile-image /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
+# Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
+RUN useradd appuser 
+USER appuser
+
+
 WORKDIR /app
 ADD config/* /config/
-ADD ./torrent-manager /app/
+ADD --chown=appuser:0 ./torrent-manager /app/
 
-# Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
-RUN useradd appuser && chown -R appuser /app
-USER appuser
 
 ENV CONFIG_YML /config/config.yml
 ENV SCAN_INTERVAL 60
