@@ -34,14 +34,14 @@ ENV PATH="/opt/venv/bin:$PATH"
 RUN useradd appuser 
 USER appuser
 
-
 WORKDIR /app
 ADD config/* /config/
 ADD --chown=appuser:0 ./torrent-manager /app/
 
-
 ENV CONFIG_YML /config/config.yml
 ENV SCAN_INTERVAL 60
+
+VOLUME /config
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
 #CMD python -m autoremovetorrents.main --conf /config/config.yml --view
